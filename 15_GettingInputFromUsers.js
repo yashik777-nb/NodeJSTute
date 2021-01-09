@@ -10,3 +10,20 @@ if (command === "add") {
 } else if (command === "remove") {
   console.log("Remove Note");
 }
+
+const yargs = require("yargs");
+
+// customize yargs version
+yargs.version("1.1.0");
+
+// add, remove, read, list
+
+yargs.command({
+  command: "add",
+  describe: "Add a new note",
+  handler: function () {
+    console.log("Adding a new note");
+  },
+});
+
+console.log(yargs.argv);
