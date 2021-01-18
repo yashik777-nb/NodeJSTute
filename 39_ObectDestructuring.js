@@ -28,8 +28,9 @@ const {
 
 console.log(productLable, price, stock, salePrice, rating);
 
-const transaction = (type, { lable: newLable, stock }) => {
+const transaction = (type, { lable: newLable, stock = 0 } = {}) => {
   console.log(type, newLable, stock);
 };
 
 transaction("order", product);
+transaction("order");
